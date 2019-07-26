@@ -55,15 +55,15 @@ greeting('Mary', 'Poppins', (greet) => {
 // Explanation: nestedfunction() can access the variable 'internal' because that variable has been created inside the scope of 'myFunction()' which is local to the 'nestedFunction()'.
 
 
-// const external = "I'm outside the function";
+const external = "I'm outside the function";
 
-// function myFunction() {
-//   console.log(external);
-//   const internal = "Hello! I'm inside myFunction!";
+function myFunction() {
+  console.log(external);
+  const internal = "Hello! I'm inside myFunction!";
 
-//   function nestedFunction() {
-//     console.log(internal);
-//   };
-//   nestedFunction();
-// }
-// myFunction();
+  function nestedFunction() {
+    console.log(internal);
+  };
+  nestedFunction();
+}
+myFunction();
