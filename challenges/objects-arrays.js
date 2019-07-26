@@ -100,10 +100,11 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = 
-      graduates.filter(function(universities){
-      return universities.first_name + ' ' + universities.university === 'Uni'
-    });
+const uni = [];
+      graduates.forEach(function(uniSchool){
+        uni.push(uniSchool.first_name + ' ' + uniSchool.university.includes('Uni'))
+        return uni;
+      });
 
 console.log(uni);
 
