@@ -81,6 +81,7 @@ graduates.forEach(function (mail) {
   universities.push(mail.email);
   return universities.sort();
 });
+console.log('---------Request one-----------')
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -95,7 +96,7 @@ graduates.forEach(function(info) {
   contactInfo.push(info.first_name + ' ' + info.email);
   return contactInfo;
 });
-
+console.log('---------Request two-----------')
 console.log(contactInfo);
 
 
@@ -107,7 +108,7 @@ const uni = [];
       uni.push(graduates.university);
     }
   })
-
+  console.log('---------Request three-----------')
 console.log(uni);
 
 
@@ -138,7 +139,7 @@ zooAnimals.forEach(function(name){
   animalNames.push(name.animal_name + ' ' + name.scientific_name);
   return animalNames;
 })
-
+console.log('---------Advanced array Request one-----------')
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -152,7 +153,7 @@ const lowerCase =
 zooAnimals.map(function(name){
   return name.animal_name.toLowerCase();
 });
-
+console.log('---------Advanced array Request two-----------')
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -165,7 +166,7 @@ const lowerPopulation =
 zooAnimals.filter(function(popu) {
   return popu.population < 5;
 });
-
+console.log('---------Advanced array Request three-----------')
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -178,7 +179,7 @@ const populationTotal =
   zooAnimals.reduce(function(num, popu) {
   return num + popu.population;
 },0);
-
+console.log('---------Advanced array Request four-----------')
 console.log(populationTotal);
 
 
